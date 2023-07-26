@@ -35,7 +35,6 @@
         app:wave_padding_top="2dp"
         app:wave_progress="33"
         app:wave_progress_color="@color/blue"
-        app:wave_visible_progress="50"
         app:wave_width="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,5 +17,7 @@ class VisualizerActivity : AppCompatActivity() {
 
         binding.waveformSeekBar.setSampleFrom(File("/storage/emulated/0/Download/example_audio_song.mp3"))
 
+
+
     }
 }
