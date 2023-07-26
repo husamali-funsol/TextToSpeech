@@ -1,5 +1,6 @@
 package com.example.audioeditor
 
+import android.content.Intent
 import android.media.MediaRecorder
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
     private lateinit var mediaRecorder: MediaRecorder
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -41,6 +43,11 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener{
             binding.root.postDelayed({
                 startRecording()
             }, 1000)
+        }
+
+        binding.btnActivity.setOnClickListener {
+            intent = Intent(this, EditorActivity2::class.java)
+            startActivity(intent)
         }
 
 
